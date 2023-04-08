@@ -40,6 +40,8 @@ public class LibrarySystem { // Declare a public class named LibrarySystem.
     class Library { // Declare a nested class named Library.
         private ArrayList<Book> books; // Declare a private instance variable: books, which is an ArrayList of Book objects.
 
+
+
         public Library() { // Define a constructor for the Library class.
             this.books = new ArrayList<Book>(); // Initialize the books instance variable to a new ArrayList of Book objects.
         }
@@ -74,6 +76,8 @@ public class LibrarySystem { // Declare a public class named LibrarySystem.
     }
 
     class User {
+
+
         private String first_name, last_name;
         private String Address;
         private int age;
@@ -85,22 +89,57 @@ public class LibrarySystem { // Declare a public class named LibrarySystem.
             this.age = age;
         }
 
-        public String getFirst_name(String first_name) {
+        public String getFirst_name() {
             return first_name;
         }
 
-        public String getLast_name(String last_name) {
+        public String getLast_name() {
             return last_name;
         }
 
-       /* public String setFirst_name(String first_name) {
+        public String getAddress() {
+            return Address;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+       public void setFirst_name(String first_name) {
             this.first_name = first_name;
         }
 
-        public String setLast_name(String last_name) {
+        public void setLast_name(String last_name) {
             this.last_name = last_name;
-        } */
+        }
 
+        public void setAddress(String Address) {
+            this.Address = Address;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+
+    }
+
+    class UserInfo {
+        private ArrayList<User> user; // Declare a private instance variable: books, which is an ArrayList of Book objects.
+
+
+
+        public UserInfo() { // Define a constructor for the Library class.
+            this.user = new ArrayList<>(); // Initialize the books instance variable to a new ArrayList of Book objects.
+        }
+
+        public void addUser(User user) { // Declare a public method named addBook that takes a Book parameter named book and returns nothing.
+            this.user.add(user); // Add the Book object passed as the book parameter to the books ArrayList.
+        }
+
+        public void removeUser(User user) { // Declare a public method named removeBook that takes a Book parameter named book and returns nothing.
+            this.user.remove(user); // Remove the Book object passed as the book parameter from the books ArrayList.
+        }
 
     }
 }

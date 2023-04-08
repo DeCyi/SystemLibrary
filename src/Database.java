@@ -15,6 +15,7 @@ public class Database {
         myLibrary.addBook(library.new Book("My Hero Academia", "Joe Biden", 1932));
         myLibrary.addBook(library.new Book("GATE", "Takumi Yanai", 2006));
         myLibrary.addBook(library.new Book("Oregairu", "Yakashi", 2008));
+
     }
     public ArrayList<LibrarySystem.Book> searchByTitle(String title) {
         return myLibrary.searchByTitle(title);

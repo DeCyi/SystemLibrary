@@ -7,6 +7,8 @@ public class Main {
         Database database = new Database();
         LibrarySystem library = new LibrarySystem();
         LibrarySystem.Library myLibrary = library.new Library();
+        LibrarySystem.UserInfo myUser = library.new UserInfo();
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter book details or 'quit' to exit.");
@@ -24,6 +26,25 @@ public class Main {
 
             LibrarySystem.Book book = library.new Book(title, author, year);
             myLibrary.addBook(book);
+        }
+
+        System.out.println("Enter your information");
+        while (true) {
+            System.out.println("First name: ");
+            String first_name = scanner.nextLine();
+            if(first_name.equalsIgnoreCase("quit")) {
+                break;
+            }
+            System.out.println("Last name: ");
+            String last_name = scanner.nextLine();
+            System.out.println("Address: ");
+            String Address = scanner.nextLine();
+            System.out.println("Age: ");
+            int age = scanner.nextInt();
+
+            LibrarySystem.User user = library.new User(first_name, last_name, Address, age);
+            myUser.addUser(user);
+
         }
 
         System.out.print("Enter a title to search: ");
